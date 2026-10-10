@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Registration | Proof Writing Initiative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            Proof Writing Initiative
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Course Offerings</a>
+            <a href="know.html">What to Know</a>
+            <a href="classes.html">Our Classes</a>
+            <a href="about.html">About Us</a>
+            <a href="mission.html">Our Mission</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <a href="register.html" class="nav-button">
+            Register
+        </a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <p class="eyebrow">JOIN A CLASS</p>
+            <h1>Register for a course.</h1>
+            <p>
+                Complete the form below to register your interest
+                in our free mathematics courses.
+            </p>
+        </div>
+    </section>
+
+    <section class="registration-section contact-section section" id="registration">
+        <div class="contact-grid">
+
+            <div class="contact-info registration-info">
+                <p class="eyebrow">REGISTRATION</p>
+                <h2>Start learning proof writing.</h2>
+                <p>
+                    Submit your information below. Expect emails with information about the class and an invite to the Google Classroom.
+                </p>
+            </div>
+
+            <div class="contact-form-box registration-form-box">
+                <form
+                    action="https://formspree.io/f/mnpjvnqb"
+                    method="POST"
+                >
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Class Registration - Proof Writing Initiative"
+                    >
+
+                    <div class="form-group">
+                        <label for="student-name">Student name</label>
+                        <input
+                            type="text"
+                            id="student-name"
+                            name="student_name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Student email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian-email">
+                            Parent/guardian email
+                        </label>
+                        <input
+                            type="email"
+                            id="guardian-email"
+                            name="guardian_email"
+                            placeholder="parent@example.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="grade">Current grade</label>
+                        <select id="grade" name="grade" required>
+                            <option value="" disabled selected>
+                                Select your grade
+                            </option>
+                            <option value="5">5th grade or below</option>
+                            <option value="6">6th grade</option>
+                            <option value="7">7th grade</option>
+                            <option value="8">8th grade</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course</label>
+                        <select id="course" name="course" required>
+                            <option value="" disabled selected>
+                                Select a course
+                            </option>
+                            <option value="Communication of Mathematical Reasoning">
+                                Communication of Mathematical Reasoning
+                            </option>
+                            <option value="" disabled>
+                                Elementary Mathematics
+                            </option>
+                            <option value="" disabled>
+                                LaTeX for Mathematicians
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="class-time">Preferred Class Time (Eastern Time)</label>
+
+                        <select id="class-time" name="class_time" required>
+                            <option value="" disabled selected>
+                                Select a class time
+                            </option>
+
+                            <option value="Monday 8:00–9:30 PM Eastern">
+                                Monday, 8:00–9:30 PM Eastern
+                            </option>
+
+                            <option value="Wednesday 7:00–8:30 PM Eastern">
+                                Wednesday, 7:00–8:30 PM Eastern
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">
+                            Previous proof-writing experience
+                        </label>
+                        <select
+                            id="experience"
+                            name="proof_writing_experience"
+                            required
+                        >
+                            <option value="" disabled selected>
+                                Select an option
+                            </option>
+                            <option value="None">No previous experience</option>
+                            <option value="Some">Some experience</option>
+                            <option value="Experienced">
+                                I have written proofs before
+                            </option>
+                        </select>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="button primary form-button"
+                    >
+                        Submit Registration →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>Proof Writing Initiative</h3>
+            <p>Free mathematics education for young mathematicians.</p>
+        </div>
+        <div class="footer-links">
+            <a href="courses.html">Course Offerings</a>
+            <a href="classes.html">Our Classes</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
