@@ -84,14 +84,8 @@ function HomePage() {
       <main id="main-content">
         <section className="home-hero section-wrap">
           <div className="home-copy">
-            <Eyebrow><span className="eyebrow-dot"></span> Free online course · Middle school</Eyebrow>
-            <h1>Math is more than getting the answer<span className="headline-period">.</span></h1>
-            <p className="hero-lede">Learn to explain <em>why</em> it works. We help young mathematicians build clear, confident proofs from ideas they already understand.</p>
-            <div className="button-row">
-              <a className="button" href="courses.html">Explore the course <span aria-hidden="true">↗</span></a>
-              <a className="button button-quiet" href="register.html">Register for free</a>
-            </div>
-            <div className="hero-note"><span className="avatar-stack" aria-hidden="true"><span>D</span><span>W</span></span><span>Created and taught by student mathematicians</span></div>
+            <h1>Learn to explain why math works<span className="headline-period">.</span></h1>
+            <p className="hero-lede">The Proof Writing Initiative was started by high school students at the North Carolina School of Science and Mathematics who remember how difficult proof writing felt in middle school. We help math-interested middle schoolers get started with proofs—a skill that can support them throughout their mathematical journeys.</p>
           </div>
           <div className="proof-visual" aria-label="An example of turning a definition into a proof">
             <div className="visual-topline"><span>THE PROOF DESK</span><span>01 / 03</span></div>
@@ -109,23 +103,14 @@ function HomePage() {
 
         <section className="course-teaser section-wrap">
           <div className="teaser-intro">
-            <Eyebrow>The current class</Eyebrow>
+            <Eyebrow>Current course</Eyebrow>
             <h2>Communication of Mathematical Reasoning</h2>
-            <p>An approachable introduction to mathematical proof for middle school students. No previous proof-writing experience is needed.</p>
-            <ArrowLink href="courses.html">See course details</ArrowLink>
+            <p>An introduction to proof writing for middle schoolers. AMC 8 or MATHCOUNTS experience can help, but neither competition nor proof-writing experience is required.</p>
           </div>
-          <div className="teaser-facts">
-            <div><span className="fact-icon">01</span><span><small>Format</small><strong>Online · Once a week</strong></span></div>
-            <div><span className="fact-icon">02</span><span><small>Session</small><strong>Weeks of Oct 26–Nov 23</strong></span></div>
-            <div><span className="fact-icon">03</span><span><small>Tuition</small><strong>Free</strong></span></div>
-            <ArrowLink href="register.html" className="fact-register">Choose a class time</ArrowLink>
+          <div className="teaser-actions">
+            <a className="button button-quiet" href="courses.html">Course details <span aria-hidden="true">↗</span></a>
+            <a className="button" href="register.html">Register <span aria-hidden="true">↗</span></a>
           </div>
-        </section>
-
-        <section className="home-bottom section-wrap">
-          <div><Eyebrow>Learn together</Eyebrow><h2>Curiosity is a good place to start.</h2></div>
-          <p>Ask questions, try ideas, and learn to make a mathematical argument someone else can follow.</p>
-          <ArrowLink href="about.html">Meet the instructors</ArrowLink>
         </section>
       </main>
     </PageLayout>
@@ -133,10 +118,10 @@ function HomePage() {
 }
 
 const outcomes = [
-  ['01', 'Use definitions', 'See how precise definitions give a proof its starting point.'],
-  ['02', 'Connect ideas', 'Build a logical path from assumptions to a conclusion.'],
-  ['03', 'Write clearly', 'Organize an argument so another person can follow it.'],
-  ['04', 'Revise reasoning', 'Find gaps and make a proof more complete.'],
+  ['01', 'Planning and page layout', 'Plan a proof and organize its steps so the reasoning is easy to follow.'],
+  ['02', 'Structural logic', 'Connect statements and justifications from the assumptions to the conclusion.'],
+  ['03', 'Using visuals to support reasoning', 'Use diagrams or other visuals when they help explain a mathematical idea.'],
+  ['04', 'Proof strategies', 'Try different approaches and choose one that fits the statement being proved.'],
 ];
 
 function CoursePage() {
@@ -144,47 +129,38 @@ function CoursePage() {
     <PageLayout active="courses">
       <main id="main-content">
         <section className="page-intro section-wrap">
-          <Eyebrow>One current course · Free</Eyebrow>
           <h1>Communication of <span>Mathematical Reasoning</span></h1>
-          <p>An online course for middle school students ready to explore how mathematical ideas fit together—and how to prove they work.</p>
         </section>
 
         <section className="session-band">
           <div className="session-band-inner">
-            <div className="session-main"><span className="live-badge"><i></i> OPEN FOR REGISTRATION</span><h2>Build your first mathematical arguments.</h2><p>Learn with examples, discussion, guided practice, and thoughtful feedback.</p><a className="button button-light" href="register.html">Register for this session <span aria-hidden="true">↗</span></a></div>
-            <div className="session-data">
-              <div><span>WHO</span><strong>Middle school students</strong></div>
-              <div><span>WHEN</span><strong>Weeks of Oct 26–Nov 23</strong></div>
-              <div><span>MEETINGS</span><strong>Monday or Wednesday · Eastern</strong></div>
-              <div><span>EXPERIENCE</span><strong>No proof background needed</strong></div>
-              <div><span>COST</span><strong>Free</strong></div>
-            </div>
+            <div className="session-main"><span className="live-badge"><i></i> FALL 2026 · OPEN FOR REGISTRATION</span><h2>Course at a glance</h2><a className="button button-light" href="register.html">Register for this session <span aria-hidden="true">↗</span></a></div>
+            <table className="session-data"><tbody>
+              <tr><th scope="row">Who it’s for</th><td>Middle school students interested in math</td></tr>
+              <tr><th scope="row">Helpful background</th><td>AMC 8 or MATHCOUNTS experience is helpful, not required</td></tr>
+              <tr><th scope="row">Proof-writing experience</th><td>Not required</td></tr>
+              <tr><th scope="row">Session</th><td>Fall 2026 · Weeks of Oct 26–Nov 23</td></tr>
+              <tr><th scope="row">Meeting options</th><td>Monday 8:00–9:30 p.m. or Wednesday 7:00–8:30 p.m. Eastern</td></tr>
+              <tr><th scope="row">Format</th><td>Online · One meeting per week</td></tr>
+              <tr><th scope="row">Availability</th><td>Classes run repeatedly throughout the year</td></tr>
+              <tr><th scope="row">Cost</th><td>Free</td></tr>
+            </tbody></table>
           </div>
         </section>
 
         <section className="section-wrap outcomes-section">
-          <div className="section-heading-row"><div><Eyebrow>What students learn</Eyebrow><h2>Reason carefully.<br />Write with purpose.</h2></div><p>Students practice the building blocks of rigorous mathematical communication—and gain confidence in explaining their thinking.</p></div>
+          <h2>What students learn</h2>
           <div className="outcome-grid">
             {outcomes.map(([number, title, description]) => <article className="outcome-card" key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}
           </div>
         </section>
 
         <section className="how-section">
-          <div className="how-inner section-wrap"><div><Eyebrow>How class works</Eyebrow><h2>Ideas become arguments through practice.</h2><p>Each class introduces a concept, explores problems together, and gives students time to write and strengthen their reasoning.</p></div><ol className="process-list"><li><span>01</span><div><strong>Explore</strong><p>Start with a question, example, or definition.</p></div></li><li><span>02</span><div><strong>Reason</strong><p>Try approaches and connect ideas step by step.</p></div></li><li><span>03</span><div><strong>Explain</strong><p>Write a complete argument and improve it with feedback.</p></div></li></ol></div>
-        </section>
-
-        <section className="faq-section section-wrap">
-          <div className="faq-heading"><Eyebrow>Good to know</Eyebrow><h2>Before you register</h2><p>New to proofs? That’s expected. We start with the basics.</p></div>
-          <div className="faq-list">
-            <details><summary>Who is this class for?</summary><p>Middle school students who enjoy math and are curious about why ideas work. MATHCOUNTS or AMC 8 experience can help, but it is not a requirement.</p></details>
-            <details><summary>Do I need to know how to write proofs already?</summary><p>No. We introduce the language and structure of proof step by step. Students should be willing to think through a challenging problem and explain their ideas.</p></details>
-            <details><summary>When are the classes?</summary><p>The session runs during the weeks of October 26 through November 23. Choose a weekly Monday or Wednesday meeting time in Eastern Time when you register.</p></details>
-            <details><summary>How much does it cost?</summary><p>The course is free.</p></details>
-          </div>
+          <div className="how-inner section-wrap"><h2>How classes work</h2><ol className="process-list"><li><span>30 min</span><div><strong>Technical ideas</strong><p>Work through the technical ideas involved in writing proofs.</p></div></li><li><span>60 min</span><div><strong>Practice</strong><p>Practice proof-writing skills with handouts written by the teachers.</p></div></li></ol></div>
         </section>
 
         <section className="roadmap-section">
-          <div className="section-wrap"><div className="roadmap-heading"><div><Eyebrow>On the horizon</Eyebrow><h2>More math, in time.</h2></div><p>These courses are planned and are not open for registration yet.</p></div><div className="roadmap-grid"><article><span>PLANNED COURSE</span><h3>Elementary Mathematics</h3><p>Reasoning and proof for younger mathematicians.</p></article><article><span>PLANNED COURSE</span><h3>LaTeX for Mathematicians</h3><p>Typeset equations, proofs, and problem sets.</p></article></div></div>
+          <div className="section-wrap"><div className="roadmap-heading"><div><Eyebrow>Planned courses · Not open for registration</Eyebrow><h2>Future courses</h2></div></div><div className="roadmap-grid"><article><h3>Elementary Mathematics</h3><p>Reasoning and proof for younger mathematicians.</p></article><article><h3>LaTeX for Mathematicians</h3><p>Typeset equations, proofs, and problem sets.</p></article></div></div>
         </section>
       </main>
     </PageLayout>
@@ -195,15 +171,13 @@ function AboutPage() {
   return (
     <PageLayout active="about">
       <main id="main-content">
-        <section className="page-intro about-intro section-wrap"><Eyebrow>About the initiative</Eyebrow><h1>Young students deserve room to <span>think deeply.</span></h1><p>We make proof-based mathematics approachable, challenging, and free—so students can explore beyond the standard curriculum.</p></section>
-        <section className="mission-strip"><div className="section-wrap mission-inner"><span className="mission-mark" aria-hidden="true">“</span><div><Eyebrow>Our purpose</Eyebrow><h2>Proof is a way to understand, not just a way to get the answer.</h2></div><p>We help students ask better questions, test ideas, and explain why a mathematical claim must be true.</p></div></section>
-        <section className="team-section section-wrap"><div className="section-heading-row"><div><Eyebrow>Student-led · Instructor-taught</Eyebrow><h2>Meet your instructors.</h2></div><p>We know what it’s like to meet proof for the first time. We’re here to make that first step feel possible.</p></div>
+        <section className="page-intro about-intro section-wrap"><Eyebrow>About the initiative</Eyebrow><h1>Our purpose</h1><p>We help students prepare for the proof-based reasoning at the heart of advanced mathematics.</p></section>
+        <section className="team-section section-wrap"><h2>Founders and instructors</h2>
           <div className="team-grid">
             <article className="team-card"><img src={danielPhoto} alt="Daniel Dimitrov" /><div className="team-info"><span>FOUNDER · INSTRUCTOR</span><h3>Daniel Dimitrov</h3><p>Daniel is a junior at NCSSM-Durham, a three-time AIME qualifier, and a coach for his middle school’s MATHCOUNTS team.</p></div></article>
             <article className="team-card"><img src={watsonPhoto} alt="Watson Houck" /><div className="team-info"><span>CO-FOUNDER · INSTRUCTOR</span><h3>Watson Houck</h3><p>Watson is a junior at NCSSM-Durham and a three-time AIME qualifier. He has participated in math competitions since elementary school and attended PROMYS in 2026.</p></div></article>
           </div>
         </section>
-        <section className="about-cta section-wrap"><div><Eyebrow>Explore with us</Eyebrow><h2>Ready to meet mathematics from a new angle?</h2></div><a className="button" href="courses.html">See the course <span aria-hidden="true">↗</span></a></section>
       </main>
     </PageLayout>
   );
@@ -219,7 +193,7 @@ function RegistrationForm() {
         <label>Parent/guardian email <span className="optional">Optional</span><input type="email" name="guardian_email" /></label>
         <label>Current grade<select name="grade" defaultValue="" required><option value="" disabled>Select grade</option><option value="5">5th grade or below</option><option value="6">6th grade</option><option value="7">7th grade</option><option value="8">8th grade</option></select></label>
         <label>Home state <span className="optional">Optional</span><input type="text" name="home_state" autoComplete="address-level1" /></label>
-        <label>Course<select name="course" defaultValue="" required><option value="" disabled>Select a course</option><option value="Communication of Mathematical Reasoning">Communication of Mathematical Reasoning: Weeks of Oct 26–Nov 23</option><option value="" disabled>Elementary Mathematics (planned)</option><option value="" disabled>LaTeX for Mathematicians (planned)</option></select></label>
+        <label>Course<select name="course" defaultValue="" required><option value="" disabled>Select a course</option><option value="Communication of Mathematical Reasoning">Communication of Mathematical Reasoning: Fall 2026</option></select></label>
         <label className="form-wide">Preferred class time <span className="field-note">Eastern Time</span><select name="class_time" defaultValue="" required><option value="" disabled>Select a time</option><option value="Monday 8:00–9:30 PM Eastern">Monday, 8:00–9:30 PM Eastern</option><option value="Wednesday 7:00–8:30 PM Eastern">Wednesday, 7:00–8:30 PM Eastern</option></select></label>
         <label className="form-wide">Previous proof-writing experience<select name="proof_writing_experience" defaultValue="" required><option value="" disabled>Select an option</option><option value="None">No previous experience</option><option value="Some">Some experience</option><option value="Experienced">I have written proofs before</option></select></label>
       </div>
@@ -234,7 +208,7 @@ function RegisterPage() {
       <main id="main-content">
         <section className="form-page-intro section-wrap"><Eyebrow>Join the class</Eyebrow><h1>Take your first step into <span>proof.</span></h1><p>Register for the free Communication of Mathematical Reasoning course.</p></section>
         <section className="registration-layout section-wrap">
-          <aside className="registration-aside"><div className="aside-card"><span className="live-badge"><i></i> CURRENT SESSION</span><h2>Communication of Mathematical Reasoning</h2><dl><div><dt>Dates</dt><dd>Weeks of Oct 26–Nov 23</dd></div><div><dt>Monday option</dt><dd>8:00–9:30 PM Eastern</dd></div><div><dt>Wednesday option</dt><dd>7:00–8:30 PM Eastern</dd></div><div><dt>Cost</dt><dd>Free</dd></div></dl><p>You’ll receive class information and a Google Classroom invitation by email.</p></div><ArrowLink href="courses.html">Read about the course</ArrowLink></aside>
+          <aside className="registration-aside"><div className="aside-card"><span className="live-badge"><i></i> FALL 2026 SESSION</span><h2>Communication of Mathematical Reasoning</h2><dl><div><dt>Dates</dt><dd>Weeks of Oct 26–Nov 23</dd></div><div><dt>Meeting options</dt><dd>Monday 8:00–9:30 p.m. or Wednesday 7:00–8:30 p.m. Eastern</dd></div><div><dt>Format</dt><dd>Online · One meeting per week</dd></div><div><dt>Cost</dt><dd>Free</dd></div></dl><p>Sessions run repeatedly throughout the year. After you register, we’ll email class information and a Google Classroom invitation.</p></div><ArrowLink href="courses.html">Read about the course</ArrowLink></aside>
           <RegistrationForm />
         </section>
       </main>
@@ -246,9 +220,8 @@ function ContactPage() {
   return (
     <PageLayout active="contact">
       <main id="main-content">
-        <section className="form-page-intro section-wrap"><Eyebrow>Get in touch</Eyebrow><h1>Questions? <span>We’re listening.</span></h1><p>Students, parents, and educators are welcome to reach out.</p></section>
+        <section className="form-page-intro section-wrap"><h1>Questions?</h1><p>Feel free to contact us.</p><ArrowLink className="contact-course-link" href="courses.html">Course details</ArrowLink></section>
         <section className="contact-layout section-wrap">
-          <div className="contact-copy"><div className="contact-art" aria-hidden="true"><span>?</span><i></i><i></i><i></i></div><h2>Need a course detail?</h2><p>Find the schedule, class overview, and answers to common questions on the course page.</p><ArrowLink href="courses.html">View course information</ArrowLink></div>
           <form className="form-card contact-form" action="https://formspree.io/f/mppqrzvw" method="POST">
             <input type="hidden" name="_subject" value="New Contact Message - Proof Writing Initiative" />
             <label>Name<input type="text" name="name" autoComplete="name" placeholder="Your name" required /></label>
