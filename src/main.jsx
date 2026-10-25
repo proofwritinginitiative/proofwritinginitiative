@@ -87,15 +87,15 @@ function HomePage() {
             <h1>Learn to explain why math works<span className="headline-period">.</span></h1>
             <p className="hero-lede">The Proof Writing Initiative was started by high school students at the North Carolina School of Science and Mathematics who remember how difficult proof writing felt in middle school. We help math-interested middle schoolers get started with proofs—a skill that can support them throughout their mathematical journeys.</p>
           </div>
-          <div className="proof-visual" aria-label="An example of turning a definition into a proof">
+          <div className="proof-visual" aria-label="An example of using definitions to prove a property of even numbers">
             <div className="visual-topline"><span>THE PROOF DESK</span><span>01 / 03</span></div>
             <div className="visual-rule"></div>
-            <Eyebrow>Start with a definition</Eyebrow>
-            <p className="visual-question">How do we know a number is even?</p>
-            <div className="proof-step"><span className="step-index">01</span><p>Let <i>m</i> be an even integer.</p></div>
-            <div className="proof-step"><span className="step-index">02</span><p>By definition, <i>m = 2k</i> for some integer <i>k</i>.</p></div>
-            <div className="proof-conclusion"><span>THEREFORE</span><strong><i>m</i> is divisible by 2.</strong><span className="conclusion-check">✓</span></div>
-            <div className="visual-caption">A proof connects what we know to what we want to show.</div>
+            <Eyebrow>Use definitions to build a bridge</Eyebrow>
+            <p className="visual-question">Is the sum of two even numbers always even?</p>
+            <div className="proof-step"><span className="step-index">01</span><p>Let <i>a</i> and <i>b</i> be even integers, so <i>a = 2k</i> and <i>b = 2j</i> for some integers <i>k</i> and <i>j</i>.</p></div>
+            <div className="proof-step"><span className="step-index">02</span><p>Add them together: <i>a + b = 2k + 2j = 2(k + j)</i>.</p></div>
+            <div className="proof-conclusion"><span>THEREFORE</span><strong><i>a + b</i> is even.</strong><span className="conclusion-check">✓</span></div>
+            <div className="visual-caption">Factoring out a 2 proves the result holds for any pair of even numbers.</div>
             <span className="visual-sticker" aria-hidden="true">WHY<br />IT<br />WORKS</span>
           </div>
           <div className="hero-decoration" aria-hidden="true"></div>
