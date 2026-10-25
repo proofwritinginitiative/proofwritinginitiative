@@ -23,15 +23,14 @@ function Header({ active }) {
     <header className="site-header">
       <div className="header-inner">
         <a className="brand" href="index.html" aria-label="Proof Writing Initiative home">
-          <span className="brand-mark" aria-hidden="true">P</span>
-          <span>Proof Writing <span className="brand-light">Initiative</span></span>
+          <span>Proof Writing Initiative</span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           {links.map(([key, label, href]) => (
             <a key={key} href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>
           ))}
         </nav>
-        <a className="button button-small header-cta" href="register.html" aria-current={active === 'register' ? 'page' : undefined}>Register <span aria-hidden="true">↗</span></a>
+        <a className="button button-small header-cta" href="register.html" aria-current={active === 'register' ? 'page' : undefined}>Register</a>
         <details className="mobile-menu">
           <summary aria-label="Open navigation menu"><span></span><span></span></summary>
           <nav aria-label="Mobile navigation">
@@ -50,8 +49,8 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <div>
-          <a className="brand footer-brand" href="index.html"><span className="brand-mark" aria-hidden="true">P</span><span>Proof Writing Initiative</span></a>
-          <p>Free mathematics courses for curious young thinkers.</p>
+          <a className="brand footer-brand" href="index.html">Proof Writing Initiative</a>
+          <p>Free online proof-writing instruction for middle school students.</p>
         </div>
         <nav aria-label="Footer navigation">
           <a href="index.html">Home</a>
@@ -60,7 +59,6 @@ function Footer() {
           <a href="register.html">Register</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <span className="footer-note">Math makes sense when you can explain why.</span>
       </div>
     </footer>
   );
@@ -74,8 +72,8 @@ function Eyebrow({ children, className = '' }) {
   return <p className={`eyebrow ${className}`.trim()}>{children}</p>;
 }
 
-function ArrowLink({ href, children, className = '' }) {
-  return <a className={`text-link ${className}`.trim()} href={href}>{children}<span aria-hidden="true"> ↗</span></a>;
+function TextLink({ href, children, className = '' }) {
+  return <a className={`text-link ${className}`.trim()} href={href}>{children}</a>;
 }
 
 function HomePage() {
@@ -87,18 +85,6 @@ function HomePage() {
             <h1>Learn to explain why math works<span className="headline-period">.</span></h1>
             <p className="hero-lede">The Proof Writing Initiative was started by high school students at the North Carolina School of Science and Mathematics who remember how difficult proof writing felt in middle school. We help math-interested middle schoolers get started with proofs—a skill that can support them throughout their mathematical journeys.</p>
           </div>
-          <div className="proof-visual" aria-label="An example of using definitions to prove a property of even numbers">
-            <div className="visual-topline"><span>THE PROOF DESK</span><span>01 / 03</span></div>
-            <div className="visual-rule"></div>
-            <Eyebrow>Use definitions to build a bridge</Eyebrow>
-            <p className="visual-question">Is the sum of two even numbers always even?</p>
-            <div className="proof-step"><span className="step-index">01</span><p>Let <i>a</i> and <i>b</i> be even integers, so <i>a = 2k</i> and <i>b = 2j</i> for some integers <i>k</i> and <i>j</i>.</p></div>
-            <div className="proof-step"><span className="step-index">02</span><p>Add them together: <i>a + b = 2k + 2j = 2(k + j)</i>.</p></div>
-            <div className="proof-conclusion"><span>THEREFORE</span><strong><i>a + b</i> is even.</strong><span className="conclusion-check">✓</span></div>
-            <div className="visual-caption">Factoring out a 2 proves the result holds for any pair of even numbers.</div>
-            <span className="visual-sticker" aria-hidden="true">WHY<br />IT<br />WORKS</span>
-          </div>
-          <div className="hero-decoration" aria-hidden="true"></div>
         </section>
 
         <section className="course-teaser section-wrap">
@@ -108,8 +94,8 @@ function HomePage() {
             <p>An introduction to proof writing for middle schoolers. AMC 8 or MATHCOUNTS experience can help, but neither competition nor proof-writing experience is required.</p>
           </div>
           <div className="teaser-actions">
-            <a className="button button-quiet" href="courses.html">Course details <span aria-hidden="true">↗</span></a>
-            <a className="button" href="register.html">Register <span aria-hidden="true">↗</span></a>
+            <TextLink href="courses.html">Course details</TextLink>
+            <a className="button" href="register.html">Register</a>
           </div>
         </section>
       </main>
@@ -118,10 +104,10 @@ function HomePage() {
 }
 
 const outcomes = [
-  ['01', 'Planning and page layout', 'Plan a proof and organize its steps so the reasoning is easy to follow.'],
-  ['02', 'Structural logic', 'Connect statements and justifications from the assumptions to the conclusion.'],
-  ['03', 'Using visuals to support reasoning', 'Use diagrams or other visuals when they help explain a mathematical idea.'],
-  ['04', 'Proof strategies', 'Try different approaches and choose one that fits the statement being proved.'],
+  ['Planning and page layout', 'Plan a proof and organize its steps so the reasoning is easy to follow.'],
+  ['Structural logic', 'Connect statements and justifications from the assumptions to the conclusion.'],
+  ['Using visuals to support reasoning', 'Use diagrams or other visuals when they help explain a mathematical idea.'],
+  ['Proof strategies', 'Try different approaches and choose one that fits the statement being proved.'],
 ];
 
 function CoursePage() {
@@ -134,7 +120,7 @@ function CoursePage() {
 
         <section className="session-band">
           <div className="session-band-inner">
-            <div className="session-main"><span className="live-badge"><i></i> FALL 2026 · OPEN FOR REGISTRATION</span><h2>Course at a glance</h2><a className="button button-light" href="register.html">Register for this session <span aria-hidden="true">↗</span></a></div>
+            <div className="session-main"><p className="session-label">Fall 2026 session · Registration open</p><h2>Course at a glance</h2><a className="button button-light" href="register.html">Register for this session</a></div>
             <table className="session-data"><tbody>
               <tr><th scope="row">Who it’s for</th><td>Middle school students interested in math</td></tr>
               <tr><th scope="row">Helpful background</th><td>AMC 8 or MATHCOUNTS experience is helpful, not required</td></tr>
@@ -150,9 +136,9 @@ function CoursePage() {
 
         <section className="section-wrap outcomes-section">
           <h2>What students learn</h2>
-          <div className="outcome-grid">
-            {outcomes.map(([number, title, description]) => <article className="outcome-card" key={number}><span>{number}</span><h3>{title}</h3><p>{description}</p></article>)}
-          </div>
+          <ul className="outcome-list">
+            {outcomes.map(([title, description]) => <li key={title}><h3>{title}</h3><p>{description}</p></li>)}
+          </ul>
         </section>
 
         <section className="how-section">
@@ -160,7 +146,7 @@ function CoursePage() {
         </section>
 
         <section className="roadmap-section">
-          <div className="section-wrap"><div className="roadmap-heading"><div><Eyebrow>Planned courses · Not open for registration</Eyebrow><h2>Future courses</h2></div></div><div className="roadmap-grid"><article><h3>Elementary Mathematics</h3><p>Reasoning and proof for younger mathematicians.</p></article><article><h3>LaTeX for Mathematicians</h3><p>Typeset equations, proofs, and problem sets.</p></article></div></div>
+          <div className="section-wrap"><div className="roadmap-heading"><div><p className="roadmap-status">Planned courses · Not open for registration</p><h2>Future courses</h2></div></div><div className="roadmap-list"><article><h3>Elementary Mathematics</h3><p>Reasoning and proof for younger mathematicians.</p></article><article><h3>LaTeX for Mathematicians</h3><p>Typeset equations, proofs, and problem sets.</p></article></div></div>
         </section>
       </main>
     </PageLayout>
@@ -174,8 +160,8 @@ function AboutPage() {
         <section className="page-intro about-intro section-wrap"><Eyebrow>About the initiative</Eyebrow><h1>Our purpose</h1><p>We help students prepare for the proof-based reasoning at the heart of advanced mathematics.</p></section>
         <section className="team-section section-wrap"><h2>Founders and instructors</h2>
           <div className="team-grid">
-            <article className="team-card"><img src={danielPhoto} alt="Daniel Dimitrov" /><div className="team-info"><span>FOUNDER · INSTRUCTOR</span><h3>Daniel Dimitrov</h3><p>Daniel is a junior at NCSSM-Durham, a three-time AIME qualifier, and a coach for his middle school’s MATHCOUNTS team.</p></div></article>
-            <article className="team-card"><img src={watsonPhoto} alt="Watson Houck" /><div className="team-info"><span>CO-FOUNDER · INSTRUCTOR</span><h3>Watson Houck</h3><p>Watson is a junior at NCSSM-Durham and a three-time AIME qualifier. He has participated in math competitions since elementary school and attended PROMYS in 2026.</p></div></article>
+            <article className="team-card"><img src={danielPhoto} alt="Daniel Dimitrov" /><div className="team-info"><p className="team-role">Founder and instructor</p><h3>Daniel Dimitrov</h3><p>Daniel is a junior at NCSSM-Durham, a three-time AIME qualifier, and a coach for his middle school’s MATHCOUNTS team.</p></div></article>
+            <article className="team-card"><img src={watsonPhoto} alt="Watson Houck" /><div className="team-info"><p className="team-role">Co-founder and instructor</p><h3>Watson Houck</h3><p>Watson is a junior at NCSSM-Durham and a three-time AIME qualifier. He has participated in math competitions since elementary school and attended PROMYS in 2026.</p></div></article>
           </div>
         </section>
       </main>
@@ -197,7 +183,7 @@ function RegistrationForm() {
         <label className="form-wide">Preferred class time <span className="field-note">Eastern Time</span><select name="class_time" defaultValue="" required><option value="" disabled>Select a time</option><option value="Monday 8:00–9:30 PM Eastern">Monday, 8:00–9:30 PM Eastern</option><option value="Wednesday 7:00–8:30 PM Eastern">Wednesday, 7:00–8:30 PM Eastern</option></select></label>
         <label className="form-wide">Previous proof-writing experience<select name="proof_writing_experience" defaultValue="" required><option value="" disabled>Select an option</option><option value="None">No previous experience</option><option value="Some">Some experience</option><option value="Experienced">I have written proofs before</option></select></label>
       </div>
-      <div className="form-submit-row"><p>Your information is used to follow up about this class.</p><button className="button" type="submit">Submit registration <span aria-hidden="true">↗</span></button></div>
+      <div className="form-submit-row"><p>Your information is used to follow up about this class.</p><button className="button" type="submit">Submit registration</button></div>
     </form>
   );
 }
@@ -208,7 +194,7 @@ function RegisterPage() {
       <main id="main-content">
         <section className="form-page-intro section-wrap"><Eyebrow>Join the class</Eyebrow><h1>Take your first step into <span>proof.</span></h1><p>Register for the free Communication of Mathematical Reasoning course.</p></section>
         <section className="registration-layout section-wrap">
-          <aside className="registration-aside"><div className="aside-card"><span className="live-badge"><i></i> FALL 2026 SESSION</span><h2>Communication of Mathematical Reasoning</h2><dl><div><dt>Dates</dt><dd>Weeks of Oct 26–Nov 23</dd></div><div><dt>Meeting options</dt><dd>Monday 8:00–9:30 p.m. or Wednesday 7:00–8:30 p.m. Eastern</dd></div><div><dt>Format</dt><dd>Online · One meeting per week</dd></div><div><dt>Cost</dt><dd>Free</dd></div></dl><p>Sessions run repeatedly throughout the year. After you register, we’ll email class information and a Google Classroom invitation.</p></div><ArrowLink href="courses.html">Read about the course</ArrowLink></aside>
+          <aside className="registration-aside"><div className="aside-card"><p className="session-label">Fall 2026 session</p><h2>Communication of Mathematical Reasoning</h2><dl><div><dt>Dates</dt><dd>Weeks of Oct 26–Nov 23</dd></div><div><dt>Meeting options</dt><dd>Monday 8:00–9:30 p.m. or Wednesday 7:00–8:30 p.m. Eastern</dd></div><div><dt>Format</dt><dd>Online · One meeting per week</dd></div><div><dt>Cost</dt><dd>Free</dd></div></dl><p>Sessions run repeatedly throughout the year. After you register, we’ll email class information and a Google Classroom invitation.</p></div><TextLink href="courses.html">Read about the course</TextLink></aside>
           <RegistrationForm />
         </section>
       </main>
@@ -220,7 +206,7 @@ function ContactPage() {
   return (
     <PageLayout active="contact">
       <main id="main-content">
-        <section className="form-page-intro section-wrap"><h1>Questions?</h1><p>Feel free to contact us.</p><ArrowLink className="contact-course-link" href="courses.html">Course details</ArrowLink></section>
+        <section className="form-page-intro section-wrap"><h1>Questions?</h1><p>Feel free to contact us.</p><TextLink className="contact-course-link" href="courses.html">Course details</TextLink></section>
         <section className="contact-layout section-wrap">
           <form className="form-card contact-form" action="https://formspree.io/f/mppqrzvw" method="POST">
             <input type="hidden" name="_subject" value="New Contact Message - Proof Writing Initiative" />
@@ -228,7 +214,7 @@ function ContactPage() {
             <label>Email<input type="email" name="email" autoComplete="email" placeholder="you@example.com" required /></label>
             <label>What can we help with?<select name="subject" defaultValue="" required><option value="" disabled>Select a topic</option><option value="Course registration">Course registration</option><option value="Course information">Course information</option><option value="General question">General question</option><option value="Other">Other</option></select></label>
             <label>Message<textarea name="message" rows="5" placeholder="How can we help?" required></textarea></label>
-            <div className="form-submit-row"><p>We’ll reply to the email you provide.</p><button className="button" type="submit">Send message <span aria-hidden="true">↗</span></button></div>
+            <div className="form-submit-row"><p>We’ll reply to the email you provide.</p><button className="button" type="submit">Send message</button></div>
           </form>
         </section>
       </main>

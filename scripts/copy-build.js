@@ -10,3 +10,7 @@ for (const page of ['index.html', 'courses.html', 'about.html', 'register.html',
 }
 
 cpSync(resolve(output, 'assets'), resolve(root, '../assets'), { recursive: true });
+
+for (const page of ['classes.html', 'know.html', 'mission.html']) {
+  cpSync(resolve(root, '../', page), resolve(output, page));
+}
