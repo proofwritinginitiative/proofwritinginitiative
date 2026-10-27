@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import danielPhoto from '../images/daniel.webp';
 import watsonPhoto from '../images/watson.jpeg';
@@ -169,22 +170,52 @@ function AboutPage() {
   );
 }
 
-function RegistrationForm() {
+function TallyEmbed({ formId, title, className = '' }) {
+  const iframeRef = useRef(null);
+  const embedUrl = `https://tally.so/embed/${formId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`;
+
+  useEffect(() => {
+    const frame = iframeRef.current;
+    const scriptUrl = 'https://tally.so/widgets/embed.js';
+    const loadEmbeds = () => {
+      if (window.Tally?.loadEmbeds) window.Tally.loadEmbeds();
+      else if (frame && !frame.src) frame.src = frame.dataset.tallySrc;
+    };
+    let script = document.querySelector(`script[src="${scriptUrl}"]`);
+
+    if (window.Tally?.loadEmbeds) {
+      loadEmbeds();
+    } else {
+      if (!script) {
+        script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = true;
+        document.body.appendChild(script);
+      }
+      script.addEventListener('load', loadEmbeds, { once: true });
+      script.addEventListener('error', loadEmbeds, { once: true });
+    }
+
+    return () => {
+      script?.removeEventListener('load', loadEmbeds);
+      script?.removeEventListener('error', loadEmbeds);
+    };
+  }, []);
+
   return (
-    <form className="form-card" action="https://formspree.io/f/mnpjvnqb" method="POST">
-      <input type="hidden" name="_subject" value="New Class Registration - Proof Writing Initiative" />
-      <div className="form-grid">
-        <label>Student name<input type="text" name="student_name" autoComplete="name" required /></label>
-        <label>Student email<input type="email" name="email" autoComplete="email" required /></label>
-        <label>Parent/guardian email <span className="optional">Optional</span><input type="email" name="guardian_email" /></label>
-        <label>Current grade<select name="grade" defaultValue="" required><option value="" disabled>Select grade</option><option value="5">5th grade or below</option><option value="6">6th grade</option><option value="7">7th grade</option><option value="8">8th grade</option></select></label>
-        <label>Home state <span className="optional">Optional</span><input type="text" name="home_state" autoComplete="address-level1" /></label>
-        <label>Course<select name="course" defaultValue="" required><option value="" disabled>Select a course</option><option value="Communication of Mathematical Reasoning">Communication of Mathematical Reasoning: Fall 2026</option></select></label>
-        <label className="form-wide">Preferred class time <span className="field-note">Eastern Time</span><select name="class_time" defaultValue="" required><option value="" disabled>Select a time</option><option value="Monday 8:00–9:30 PM Eastern">Monday, 8:00–9:30 PM Eastern</option><option value="Wednesday 7:00–8:30 PM Eastern">Wednesday, 7:00–8:30 PM Eastern</option></select></label>
-        <label className="form-wide">Previous proof-writing experience<select name="proof_writing_experience" defaultValue="" required><option value="" disabled>Select an option</option><option value="None">No previous experience</option><option value="Some">Some experience</option><option value="Experienced">I have written proofs before</option></select></label>
-      </div>
-      <div className="form-submit-row"><p>Your information is used to follow up about this class.</p><button className="button" type="submit">Submit registration</button></div>
-    </form>
+    <div className={`tally-embed-card ${className}`.trim()}>
+      <iframe
+        ref={iframeRef}
+        data-tally-src={embedUrl}
+        loading="lazy"
+        width="100%"
+        height="200"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+        title={title}
+      />
+    </div>
   );
 }
 
@@ -195,7 +226,10 @@ function RegisterPage() {
         <section className="form-page-intro section-wrap"><Eyebrow>Join the class</Eyebrow><h1>Take your first step into <span>proof.</span></h1><p>Register for the free Communication of Mathematical Reasoning course.</p></section>
         <section className="registration-layout section-wrap">
           <aside className="registration-aside"><div className="aside-card"><p className="session-label">Fall 2026 session</p><h2>Communication of Mathematical Reasoning</h2><dl><div><dt>Dates</dt><dd>Weeks of Oct 26–Nov 23</dd></div><div><dt>Meeting options</dt><dd>Monday 8:00–9:30 p.m. or Wednesday 7:00–8:30 p.m. Eastern</dd></div><div><dt>Format</dt><dd>Online · One meeting per week</dd></div><div><dt>Cost</dt><dd>Free</dd></div></dl><p>Sessions run repeatedly throughout the year. After you register, we’ll email class information and a Google Classroom invitation.</p></div><TextLink href="courses.html">Read about the course</TextLink></aside>
-          <RegistrationForm />
+          <div>
+            <TallyEmbed formId="bZZeDZ" title="Communication of Mathematical Reasoning registration form" />
+            <p className="form-note">Your information is used to follow up about this class.</p>
+          </div>
         </section>
       </main>
     </PageLayout>
@@ -208,14 +242,10 @@ function ContactPage() {
       <main id="main-content">
         <section className="form-page-intro section-wrap"><h1>Questions?</h1><p>Feel free to contact us.</p><TextLink className="contact-course-link" href="courses.html">Course details</TextLink></section>
         <section className="contact-layout section-wrap">
-          <form className="form-card contact-form" action="https://formspree.io/f/mppqrzvw" method="POST">
-            <input type="hidden" name="_subject" value="New Contact Message - Proof Writing Initiative" />
-            <label>Name<input type="text" name="name" autoComplete="name" placeholder="Your name" required /></label>
-            <label>Email<input type="email" name="email" autoComplete="email" placeholder="you@example.com" required /></label>
-            <label>What can we help with?<select name="subject" defaultValue="" required><option value="" disabled>Select a topic</option><option value="Course registration">Course registration</option><option value="Course information">Course information</option><option value="General question">General question</option><option value="Other">Other</option></select></label>
-            <label>Message<textarea name="message" rows="5" placeholder="How can we help?" required></textarea></label>
-            <div className="form-submit-row"><p>We’ll reply to the email you provide.</p><button className="button" type="submit">Send message</button></div>
-          </form>
+          <div>
+            <TallyEmbed formId="yXX4Rg" title="Proof Writing Initiative contact form" />
+            <p className="form-note">We’ll reply to the email you provide.</p>
+          </div>
         </section>
       </main>
     </PageLayout>
