@@ -1,5 +1,5 @@
 {
-  "name": "proof-writing-initiative",
+  "name": "proofs-4-all",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/copy-build.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify": "node scripts/verify-site.mjs"
   },
   "dependencies": {
     "react": "^19.3.0",
