@@ -2,7 +2,7 @@
 
 ## Summary
 
-Overall rating: Good. The React website helps parents compare two free math courses and complete registration. The homepage's square puzzle gives students a small example of the reasoning the program teaches.
+Overall rating: Good. The React website helps parents compare two free math courses and complete registration.
 
 ## Fixes made
 
@@ -13,7 +13,7 @@ Overall rating: Good. The React website helps parents compare two free math cour
 
 ## What works
 
-The five public routes, current-page indicators, native disclosures, and course-specific schedule links retain familiar browser behavior. Main site buttons and disclosure controls measure at least 44 CSS pixels tall. Mobile reading copy uses a 17 CSS pixel default. The square puzzle remains the defining visual detail, and the repeated footer wordmark text was removed.
+The five public routes, current-page indicators, native disclosures, and course-specific schedule links retain familiar browser behavior. Main site buttons and disclosure controls measure at least 44 CSS pixels tall. Mobile reading copy uses a 17 CSS pixel default. The homepage leads with the course description and links.
 
 ## Platform notes
 

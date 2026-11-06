@@ -52,37 +52,15 @@ p { color: var(--muted); }
 .desktop-nav a { display: flex; align-items: center; min-height: 44px; color: var(--muted); font-size: .9rem; font-weight: 550; text-decoration: none; }
 .desktop-nav a:hover, .desktop-nav a[aria-current='page'] { color: var(--blue); text-decoration: underline; text-underline-offset: 7px; }
 .mobile-menu { display: none; }
-/* Home: the puzzle gives the visual language a mathematical purpose. */
-.home-hero { display: grid; grid-template-columns: 1.2fr .85fr; align-items: center; gap: clamp(45px, 7vw, 100px); padding-top: 74px; padding-bottom: 80px; }
-.home-copy h1 { max-width: 650px; margin-bottom: 25px; font-size: clamp(3.2rem, 5.2vw, 5rem); }
+/* Home */
+.home-hero { padding-block: 64px 66px; }
+.home-copy h1 { max-width: 810px; margin-bottom: 25px; font-size: clamp(3.2rem, 5.2vw, 5rem); }
 .hero-lede { max-width: 535px; font-size: 1.1rem; line-height: 1.7; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 25px; margin-top: 30px; }
 .hero-actions .text-link { font-size: .89rem; }
 .hero-footnote { display: flex; align-items: center; gap: 13px; margin-top: 34px; }
 .hero-footnote p { margin: 0; font-size: .82rem; line-height: 1.6; }
 .small-spark { color: var(--blue); font-size: 2rem; line-height: 1; }
-.puzzle-board { align-self: center; padding: 25px 30px 20px; border-radius: 12px; background: var(--stage); color: #fff; }
-.puzzle-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; color: #c7d5e7; font-size: .75rem; }
-.puzzle-square { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--yellow); transform: rotate(12deg); }
-.puzzle-board h2 { margin-top: 29px; margin-bottom: 27px; font-size: clamp(1.7rem, 2.4vw, 2.2rem); font-weight: 550; letter-spacing: -.035em; line-height: 1.2; }
-.square-puzzle { width: 192px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 0 auto 25px; transform: rotate(-7deg); }
-.puzzle-tile { aspect-ratio: 1; border-radius: 3px; }
-.tile-one { background: var(--yellow); }
-.tile-three { background: #6c99f2; }
-.tile-five { background: #dbe7fa; }
-.puzzle-equation { display: flex; align-items: center; justify-content: center; gap: 17px; margin-bottom: 25px; color: #fff; font-size: 1.7rem; font-weight: 600; }
-.puzzle-equation span:first-child { color: var(--yellow); }
-.puzzle-equation span:nth-of-type(2) { color: #8bb1ff; }
-.puzzle-equation span:nth-of-type(3) { color: #dbe7fa; }
-.puzzle-equation b { font-size: 1.15rem; font-weight: 400; }
-.puzzle-equation strong { font-size: 1.65rem; }
-.puzzle-reveal { border-top: 1px solid #40546b; }
-.puzzle-reveal summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 49px; padding-top: 5px; cursor: pointer; list-style: none; color: #e0e8f4; font-size: .8rem; }
-.puzzle-reveal summary::-webkit-details-marker { display: none; }
-.puzzle-reveal summary > span { font-size: 1.4rem; color: var(--yellow); }
-.puzzle-reveal[open] summary > span { transform: rotate(45deg); }
-.puzzle-reveal p { padding: 4px 0 6px; margin: 0; font-size: .84rem; line-height: 1.7; color: #cbd7e5; }
-.puzzle-board :focus-visible { outline-color: var(--yellow); }
 .session-strip { border-block: 1px solid var(--line); background: var(--subtle); }
 .session-strip > div { display: flex; align-items: center; justify-content: space-between; gap: 36px; padding-block: 25px; }
 .session-strip p { margin: 0; color: var(--ink); font-size: .9rem; }
@@ -257,10 +235,8 @@ p { color: var(--muted); }
   .section-wrap, .header-inner, .footer-inner, .footer-bottom { width: calc(100% - 56px); }
   .header-inner { gap: 26px; }
   .desktop-nav { gap: 22px; }
-  .home-hero { gap: 40px; grid-template-columns: 1.1fr .9fr; }
   .home-copy h1 { font-size: clamp(2.9rem, 5.1vw, 4.4rem); }
   .hero-actions { gap: 10px 18px; }
-  .puzzle-board { padding-inline: 24px; }
   .course-card { padding: 27px 26px; }
   .course-card-top { gap: 12px; }
   .course-audience { max-width: 220px; }
@@ -281,14 +257,9 @@ p { color: var(--muted); }
   .desktop-nav { gap: 17px; }
   .desktop-nav a { font-size: .83rem; }
   .header-cta { padding-inline: 17px; }
-  .home-hero { gap: 30px; padding-block: 54px 60px; }
+  .home-hero { padding-block: 54px 60px; }
   .home-copy h1 { font-size: 3rem; }
   .hero-lede { font-size: .98rem; }
-  .puzzle-board { padding-inline: 22px; }
-  .puzzle-heading { font-size: .68rem; }
-  .puzzle-board h2 { font-size: 1.65rem; }
-  .square-puzzle { width: 158px; }
-  .puzzle-equation { gap: 12px; font-size: 1.5rem; }
   .hero-footnote { margin-top: 24px; }
   .session-strip > div { gap: 20px; }
   .session-strip .status { font-size: .78rem; }
@@ -349,16 +320,11 @@ p { color: var(--muted); }
   .mobile-menu nav { position: absolute; top: calc(100% + 8px); right: 0; display: grid; width: min(260px, calc(100vw - 40px)); max-height: calc(100dvh - 75px); overflow-y: auto; padding: 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); box-shadow: 0 10px 30px #172c4314; }
   .mobile-menu nav a { display: flex; align-items: center; min-height: 46px; padding: 10px 14px; color: var(--ink); font-size: .93rem; text-decoration: none; }
   .mobile-menu nav a:hover, .mobile-menu nav a[aria-current='page'] { background: var(--blue-wash); color: var(--blue); border-radius: 4px; }
-  .home-hero { grid-template-columns: 1fr; gap: 36px; padding-top: 42px; padding-bottom: 43px; }
+  .home-hero { padding-block: 42px 43px; }
   .home-copy h1 { max-width: 580px; font-size: clamp(2.8rem, 9.7vw, 4.1rem); }
   .hero-lede { max-width: 540px; font-size: 1rem; }
   .hero-actions { margin-top: 24px; gap: 10px 20px; }
   .hero-footnote { margin-top: 25px; }
-  .puzzle-board { max-width: 450px; width: 100%; justify-self: center; padding: 22px 26px 16px; }
-  .puzzle-board h2 { font-size: 1.8rem; margin-top: 22px; }
-  .puzzle-heading { font-size: .75rem; }
-  .square-puzzle { width: 171px; }
-  .puzzle-equation { gap: 17px; font-size: 1.65rem; }
   .session-strip > div { display: grid; grid-template-columns: 1fr; gap: 12px; padding-block: 23px; }
   .session-strip .status { font-size: .85rem; }
   .session-strip p { font-size: .9rem; }
@@ -473,7 +439,6 @@ p { color: var(--muted); }
 /* Web equivalents of Larger Text, Increase Contrast and system appearance. */
 body { overflow-wrap: anywhere; }
 .button { text-align: center; }
-.puzzle-reveal summary:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
 .mobile-menu summary:hover { text-decoration: underline; text-underline-offset: 4px; }
 .mobile-menu nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 4px; }
 .header-cta[aria-current='page'] { text-decoration: underline; text-underline-offset: 4px; }
@@ -487,7 +452,6 @@ body { overflow-wrap: anywhere; }
 
 @media (max-width: 22em) {
   .schedule { grid-template-columns: 1fr; }
-  .puzzle-equation { gap: .55rem; flex-wrap: wrap; }
 }
 
 @media (max-height: 32em) {
@@ -512,7 +476,7 @@ body { overflow-wrap: anywhere; }
 }
 
 @media (forced-colors: active) {
-  .button, .course-choice, .puzzle-board { border: 1px solid ButtonText; }
+  .button, .course-choice { border: 1px solid ButtonText; }
   .course-choice[aria-current='true'] { border-width: 3px; }
-  :focus-visible, .puzzle-board :focus-visible { outline-color: Highlight; }
+  :focus-visible { outline-color: Highlight; }
 }
