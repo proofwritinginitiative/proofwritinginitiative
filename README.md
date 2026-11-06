@@ -20,6 +20,8 @@ pnpm verify
 
 The build writes `dist/`, then copies the five compiled pages and assets into the repository root for the existing GitHub Pages setup. Commit source changes together with the regenerated root HTML/assets when deploying through the repository. Do not edit compiled root pages by hand. Building locally does not publish the site or change GitHub Pages settings.
 
+Vite gives compiled assets content-based filenames so browsers fetch the correct version on each release. Keep the previous release’s files in `assets/` through the cache window so previously loaded pages still work.
+
 React components and styles live in `src/`; HTML entry points and metadata live in `src/pages/`. The routes remain `index.html`, `courses.html`, `about.html`, `register.html`, and `contact.html`. Legacy `classes.html` and `know.html` redirect to Course; `mission.html` redirects to About. The build also copies those redirects into `dist/` for preview.
 
 `pnpm verify` checks the compiled pages, referenced assets, root deployment copies, metadata, redirects, retained form IDs, stale branding/dates, and accidental public spreadsheet links. It does not replace desktop/mobile browser checks or prove that Tally submissions reach Google Sheets.

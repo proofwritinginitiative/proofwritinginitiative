@@ -20,11 +20,6 @@ export default defineConfig({
         register: resolve(sourcePages, 'register.html'),
         contact: resolve(sourcePages, 'contact.html'),
       },
-      output: {
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name][extname]',
-      },
     },
   },
 });
