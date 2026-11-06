@@ -4,13 +4,13 @@ Updated November 6, 2026. This is an implementation assessment, not a legal comp
 
 ## What is established, and what remains unknown
 
-Both registration forms are published: CMR at `https://tally.so/r/bZZeDZ` and elementary at `https://tally.so/r/o9DyQx`. Required-field, email, and acknowledgement validation passed. Synthetic submissions were verified in the existing `CMR Registrations` tab and new `Elementary 2026-27` tab of the same restricted workbook. The existing contact pathway remains `https://tally.so/r/yXX4Rg`.
+Both registration forms are published: CMR at `https://tally.so/r/bZZeDZ` and elementary at `https://tally.so/r/o9DyQx`. Required-field, email, and acknowledgement validation passed. Synthetic submissions were verified in the existing `Registrations` tab and new `Elementary 2026-27` tab of the same restricted workbook. The existing contact pathway remains `https://tally.so/r/yXX4Rg`.
 
 The owner has confirmed the public privacy contact, **proofwritinginitiative@gmail.com**, and a policy of **manually deleting registration records after the class ends**. Authorized people are **Daniel, Watson, Gavin, and adult overseer Dr. William Davis**. These are owner-confirmed decisions; completion of deletion or application of every access setting has not been verified.
 
 The workbook access list contains five accounts: the owner, two accounts identified as Daniel's, Watson's account, and an editor the owner confirmed is Gavin. No separate account identifiable as Dr. William Davis was observed; his authorized role does not establish direct account access. No sharing permissions were changed. Private account emails and the workbook URL/ID are deliberately omitted here.
 
-The planned Zoom Pro and personal Google Classroom arrangements, including under-13 students, remain pending qualified review by the owner's decision. Registration delivery has been verified; platform eligibility, future retention execution, and legal compliance have not. CMR's existing email/Classroom follow-up description remains, but email delivery was not tested. No response data was downloaded for this research.
+The planned Zoom Pro and personal Google Classroom arrangements, including under-13 students, remain pending qualified review by the owner's decision. Registration delivery has been verified; platform eligibility, future retention execution, and legal compliance have not. The site says CMR class information will go to parents by email, with platform access instructions to follow after review. Email delivery was outside the synthetic Sheets test. No response data was downloaded for this research.
 
 ## Applicable requirements to assess
 

@@ -6,7 +6,7 @@ Updated November 6, 2026. Both public registration forms were tested through to 
 
 | Purpose | Public form | Private destination | Observed status |
 | --- | --- | --- | --- |
-| CMR, third cohort | [Proofs 4 All CMR](https://tally.so/r/bZZeDZ) | Existing `PWI Form Responses` workbook → `CMR Registrations` tab | Existing form and integration retained; updated form submitted successfully; matching synthetic test row verified in Sheets |
+| CMR, third cohort | [Proofs 4 All CMR](https://tally.so/r/bZZeDZ) | Existing `PWI Form Responses` workbook → `Registrations` tab | Existing form and integration retained; updated form submitted successfully; matching synthetic test row verified in Sheets |
 | Elementary Mathematics | [Elementary registration](https://tally.so/r/o9DyQx) | Same workbook → new `Elementary 2026-27` tab | Form published and connected through the existing authorized Google account; matching synthetic test row verified in Sheets |
 | Contact | [Proofs 4 All contact](https://tally.so/r/yXX4Rg) | Existing contact pathway | Rebranded; original fields and integration preserved; adult-completion guidance added |
 
@@ -33,7 +33,7 @@ Parent/guardian email is now required. A required parent/guardian name field and
 
 Existing CMR fields retained their IDs. Tally automatically added columns for the new parent name and acknowledgement, including a checkbox boolean column, and updated the student-name header label. Existing header positions changed automatically; the original column layout was not preserved unchanged. The inspected November 5, 3:03 spreadsheet version showed only the original header row in the CMR tab, with no response records. The one pre-existing Tally response was left untouched. No historical response data was exported into this repository.
 
-The existing CMR email/Classroom follow-up description remains, but delivery of those emails was not tested. Appropriate Google Classroom account arrangements for younger students remain unresolved.
+The site says CMR class information will go to parents by email. Google Classroom account arrangements remain under review. The synthetic tests verified Tally and Sheets delivery.
 
 ## Elementary registration as configured
 
@@ -56,7 +56,7 @@ The form uses the existing authorized Google connection and writes to the new `E
 
 - Required-field, invalid-email, and unchecked-acknowledgement validation passed in form preview.
 - Each course accepted a clearly labeled synthetic submission and displayed its thank-you screen.
-- The corresponding test rows were then observed in `CMR Registrations` and `Elementary 2026-27`, establishing actual form-to-Sheets delivery for both pathways.
+- The corresponding test rows were then observed in `Registrations` and `Elementary 2026-27`, establishing actual form-to-Sheets delivery for both pathways.
 - The synthetic email used the reserved `example.com` domain. No email delivery or automatic confirmation-email claim is made.
 - **Test cleanup completed after explicit user approval.** Both synthetic Tally records were permanently deleted. The verified remaining counts were zero elementary submissions and the one pre-existing CMR submission. The synthetic `A2:N2` contents were cleared in both spreadsheet tabs and verified empty; headers and the existing Tally registration were preserved.
 - Contact-form delivery was not retested; its fields and existing integration were preserved.
@@ -65,4 +65,4 @@ The form uses the existing authorized Google connection and writes to the new `E
 
 The owner confirmed the public privacy contact, authorized people, adult overseer, and manual deletion of registration records after the class ends. Those decisions do not verify every account's access or complete the operational/legal review. The [privacy review](privacy-review.md) records the remaining provider eligibility, access verification across services, retention execution, and COPPA scope/consent questions. The planned Zoom and Google Classroom arrangements remain pending qualified review. A parent acknowledgement is not a claim of verified parental consent or legal compliance.
 
-Registration closes December 14, 2026 for everyone. No exact closing time has been set, and no automatic cutoff is configured. The website's form IDs/readiness flags and its final build/browser checks should match the verified form status above.
+Registration closes December 14, 2026 for everyone. No exact closing time has been set, and no automatic cutoff is configured. The website links to the verified forms. The production build and browser checks passed.
