@@ -9,6 +9,8 @@ for (const page of ['index.html', 'courses.html', 'about.html', 'register.html',
   cpSync(resolve(output, page), resolve(root, '../', page));
 }
 
+// Distribute the font license alongside the bundled font.
+cpSync(resolve(root, '../src/fonts/OFL.txt'), resolve(output, 'assets/dm-sans-OFL.txt'));
 cpSync(resolve(output, 'assets'), resolve(root, '../assets'), { recursive: true });
 
 for (const page of ['classes.html', 'know.html', 'mission.html']) {
